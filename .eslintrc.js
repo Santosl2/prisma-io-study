@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["airbnb-base", "plugin:prettier/recommended"],
+  extends: ["airbnb-base"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -13,7 +13,6 @@ module.exports = {
     "@typescript-eslint",
     "eslint-plugin-import-helpers",
     "unused-imports",
-    "unused-vars",
     "prettier",
   ],
   rules: {
@@ -26,7 +25,20 @@ module.exports = {
         alphabetize: { order: "asc", ignoreCase: true },
       },
     ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
 
     "prettier/prettier": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    quotes: ["error", "double"],
   },
 };

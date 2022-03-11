@@ -6,6 +6,9 @@
   "repository": "git@github.com:Santosl2/prisma-io-study.git",
   "author": "Santosl2c <mfilype2019@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore node_modules src/index.ts"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
@@ -20,6 +23,7 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
+    "@prisma/client": "3.10.0",
     "prisma": "^3.10.0"
   }
 }
