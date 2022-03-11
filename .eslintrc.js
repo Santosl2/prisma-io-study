@@ -16,6 +16,16 @@ module.exports = {
     "prettier",
   ],
   rules: {
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
